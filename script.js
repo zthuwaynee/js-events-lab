@@ -16,3 +16,22 @@ const keyMsg = document.getElementById("key-message");
 keyInput.addEventListener("keydown", (e) => {
   keyMsg.textContent = `Last key pressed: ${e.key}`;
 });
+
+const form = document.getElementById("demo-form");
+const formMsg = document.getElementById("form-message");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formMsg.textContent = "Form submitted successfully!";
+});
+
+
+const focusInput = document.getElementById("focus-input");
+const focusMsg = document.getElementById("focus-message");
+
+focusInput.addEventListener("focus", () => {
+  focusMsg.textContent = "Input is focused.";
+});
+focusInput.addEventListener("blur", () => {
+  focusMsg.textContent = "Input lost focus.";
+});
